@@ -1,0 +1,61 @@
+/* moved to a second file due to problems with styling main element */
+
+.add-image {
+    margin: 2em 0;
+}
+
+.add-image input {
+    font-family: 'Comfortaa', cursive;
+    margin-top: 0.5em;
+}
+
+.register-button {
+    margin-top: 3.5em;
+}
+
+@media only screen and (max-width: 480px) {
+    main {
+        height: auto;
+    }
+
+    .register-form {
+        height: 45em;
+    }
+    .register-text {
+        height: 15%;
+    }
+    .register-data {
+        height: 70%;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .personal-data {
+        width: 100%;
+    }
+    .skill-level-image {
+        width: 100%;
+        padding: 0;
+        margin: 2em;
+    }
+    .skill-level-image p {
+        text-align: center;
+        padding: 0 1em;
+    }
+    .skill-level-image div {
+        padding-left: 3em;
+    }
+    .register-button {
+        height: 15%;
+    }
+
+    .add-image label {
+        font-size: 1em;
+        text-align: center;
+    }
+}
+
+.no-valid {
+    border: 2px solid red !important;
+    outline: none;
+}

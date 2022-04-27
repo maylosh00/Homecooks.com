@@ -1,0 +1,141 @@
+.recipe-tile-container {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.recipe-tile {
+    width: 15em;
+    height: 20em;
+    font-size: 1.2em;
+    box-shadow: 4px 3px 6px #00000040;
+    border-radius: 1em;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.recipe-tile-img {
+    height: 70%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 1em 1em 0 0;
+    position: relative;
+}
+
+.recipe-tile-img img {
+    position: absolute;
+    left: -1000%;
+    right: -1000%;
+    top: -1000%;
+    bottom: -1000%;
+    margin: auto;
+    max-width:110%;
+    min-height: 100%;
+    min-width: 100%;
+
+    transition: transform .4s ease;
+}
+
+.recipe-tile-container:hover img,
+.recipe-tile-container:focus img {
+    transform: scale(1.3);
+}
+
+.recipe-tile-text {
+    color: #535353;
+    font-family: 'Comfortaa', cursive;
+    text-align: center;
+    height: 30%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0em 0.5em 0 0.5em;
+    border-top: 2px solid #535353;
+}
+
+.recipe-tile-text p {
+    margin: 0;
+}
+
+/* fragment kodu dla landing_page: */
+
+.first-recipe {
+    grid-area: first;
+}
+
+.second-recipe {
+    grid-area: second;
+}
+
+.third-recipe {
+    grid-area: third;
+}
+
+/* rozmiary: */
+
+.size1 {
+    height: calc(20em * 0.75);
+    width: calc(15em * 0.75);
+}
+
+.size2 {
+    height: calc(20em * 0.67);
+    width: calc(15em * 0.67);
+}
+
+.size2 p {
+    font-size: 0.9em;
+}
+
+.size3 {
+    height: calc(20em * 0.7);
+    width: calc(15em * 0.7);
+}
+
+.size3 p {
+    font-size: 0.8em;
+}
+
+@media only screen and (max-width: 768px) {
+    .size1 {
+        width: 23em;
+        height: 11.5em;
+    }
+    .size1 p {
+        font-size: 0.8em;
+    }
+
+    .size2 p {
+        font-size: 0.7em;
+    }
+}
+@media only screen and (max-width: 480px) {
+
+    .size1 {
+        width: 15em;
+        height: 7.5em;
+    }
+
+    .size2 {
+        height: 8em;
+        width: 6em;
+    }
+
+    .size1 p,
+    .size2 p {
+        font-size: 0.7em;
+    }
+
+    .size3 {
+        height: calc(20em * 0.45);
+        width: calc(15em * 0.45);
+    }
+
+    .size3 p {
+        font-size: 0.75em;
+    }
+}

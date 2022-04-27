@@ -1,0 +1,268 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Ustawienia dla headera */
+
+header {
+    z-index: 1;
+    position: sticky; 
+    top: 0;
+    width: calc(100vw-12px);
+    height: 65px;
+    padding: 6px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 2px 6px #588B8B29;
+
+    display: flex;
+    align-content: center;
+}
+
+.logo {
+    /*width: 33vw;*/
+    flex-grow: 1;
+    text-align: center;
+}
+
+.logo > a > img {
+    width: 258px;
+}
+
+.login-button {
+    color: #000;
+    font-family: 'Comfortaa', cursive;
+    font-size: 0.9em;
+    /*width: 33vw;*/
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    margin-left: 1em;
+    position: relative;
+}
+
+.dropdown-button {
+    border: none;
+    background-color: transparent;
+    padding: 0.5em;
+    font-size: 2em;
+}
+
+.dropdown-button:hover {
+    border: none;
+    background-color: transparent;
+    color: #F28F3B;
+    padding: 0.5em;
+    font-size: 2em;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 300px;
+    z-index: 1;
+    padding-left: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    top: 58px;
+    box-shadow: 0px 2px 6px #588B8B29;
+}
+
+.logout {
+    color: #000;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+.logout i {
+    font-size: 1.5em;
+    padding-right: 0.3em;
+}
+
+.logout:visited {
+    color: #000;
+}
+
+.logout:hover {
+    color: #F39241;
+}
+.show {
+    display: flex;
+}
+
+.profile-pic {
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.profile-pic img {
+    position: absolute;
+    left: -1000%;
+    right: -1000%;
+    top: -1000%;
+    bottom: -1000%;
+    margin: auto;
+    max-width:110%;
+    min-height: 100%;
+    min-width: 100%;   
+}
+
+.login-button p {
+    margin-left: 0.7em;
+}
+
+.login-button > a {
+    color: #565656;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.login-button > a:visited {
+    color: #565656;
+}
+
+.login-button > a:hover {
+    color: #F28F3B;
+}
+
+.search-bar {
+    /*width: 33vw;*/
+    flex-grow: 1;
+    align-items: center;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 1em;
+}
+
+.search-bar > form {
+    border-bottom: 1px solid #F39241;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-bar > form > input {
+    border: none;
+    padding: 0.8em;
+    font-family: 'Comfortaa', cursive;
+    color: #F39241;
+    outline: none;
+
+}
+
+.search-bar > form > input::placeholder {
+    color: #F39241;
+}
+
+.search-bar > form > button {
+    border: none;
+    background-color: transparent;
+}
+
+.search-bar > form > button > i {
+    color: #F39241;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .dropdown-content {
+        min-width: 200px;
+    }
+
+    .search-bar > form > input {
+        display: none;
+    }
+    .search-bar > form {
+        border-bottom: none;
+        margin-right: 1em;
+    }
+    .login-button > a > p,
+    .login-button > p {
+        display: none;
+    }
+    
+    .search-bar > form > button > i, 
+    .login-button > a > i {
+        font-size: 2em;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    header {
+        height: 46px;
+        padding: 4px;
+    }
+
+    .dropdown-button {
+        font-size: 1.5em;
+    }
+
+    .dropdown-button:hover {
+        font-size: 1.5em;
+    }
+
+    .dropdown-content {
+        top: 41px;
+        min-width: 120px;
+        font-size: 0.8em;
+    }
+
+    .logo > a > img {
+        width: 190px;
+    }
+    .search-bar > form > button > i, 
+    .login-button > a > i {
+        font-size: 1.5em;
+    }
+    .profile-pic {
+        width: 29px;
+        height: 29px;
+    }
+
+    .login-button {
+        margin-left: 0.5em;
+    }
+    .search-bar {
+        margin-right: 0;
+    }
+}
+
+/* ustawienia dla footera */
+footer {
+    background-color: #F39241;
+    height: 1.3em;
+    display: flex;
+    align-content: center;
+    margin: none;
+    padding: none;
+    width:100%;
+}
+
+footer > p {
+    color: #fff;
+    font-family: 'Comfortaa', cursive;
+    font-size: 0.8em;
+    opacity: 0.6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer > p:first-child {
+    margin-left: 2em;
+    margin-right: auto;
+}
+footer > p:last-child {
+    margin-right: 2em;
+    margin-left: auto;
+}
