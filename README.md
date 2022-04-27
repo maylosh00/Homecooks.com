@@ -8,6 +8,7 @@ Final project for "Introduction to web application programming" laboratory on Cr
 * JavaScript w/o frameworks
 * PostgreSQL
 * PHP
+* Docker
 
 ## Preview
 ![Preview](preview.png)
